@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: lightgray;
+}
+
+nav {
+    background: linear-gradient(35deg,teal 50%, black 90%);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
