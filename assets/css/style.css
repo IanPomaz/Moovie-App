@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0; 
     background: lightgray;
 }
 
@@ -9,4 +9,8 @@ nav {
     text-align: center;
     padding: 5px;
     border-bottom: 2px solid #000;
+}
+
+main {
+    padding: 5px;
 }
