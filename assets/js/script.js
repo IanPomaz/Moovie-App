@@ -25,21 +25,33 @@
         return response.json();
       })
       .then(function ({Search}) {
-        //looping over the fetch response and inserting the URL of your repos into a list
+        //using arrow function and looping over the fetch response and inserting the URL of your repos into a list
           Search.forEach(movie => {
             const { Poster } = movie;
-
+            //retrieves imdb id
+            const { imdbID } = movie;
+            //href combines the first part of the link with the imdb id 
             results.innerHTML += `
               <div class="card">
-                <img src=${Poster} />
+              <a href=https://www.imdb.com/title/${imdbID}/><img src=${Poster} />
+
               </div>
             `;
-
+            
             console.log(movie);
+            console.log(`https://www.imdb.com/title/${imdbID}/`);
+            
           });
         });
     
   }
-//event listener for getApi function
-document.getElementById("submit").addEventListener("click",getApi)
-
+  
+//event listener for click and  getApi function
+document.getElementById("submit").addEventListener("click", getApi);
+var input = document.getElementById("myInput");
+addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("submit").click();
+    }
+});
