@@ -3,7 +3,7 @@
   function buildString() {
     //pulls the input value 
     let inputValue = document.getElementById("searchbox").value;
-    var urlString = "http://www.omdbapi.com/?type=movie&s="
+    var urlString = "https://www.omdbapi.com/?type=movie&s="
     var apiKey = "&apikey=1fb9d06f"
 
     //concat all the variables together in the correct order
@@ -21,7 +21,7 @@
     var requestUrl = buildString();
   
     document.getElementById("results").innerHTML = "";
-
+ 
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
