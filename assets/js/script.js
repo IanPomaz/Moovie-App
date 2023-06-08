@@ -20,6 +20,8 @@
     // Insert the API url to get a list of your repos
     var requestUrl = buildString();
   
+    document.getElementById("results").innerHTML = "";
+
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
@@ -34,7 +36,6 @@
             results.innerHTML += `
               <div class="card">
               <a href=https://www.imdb.com/title/${imdbID}/><img src=${Poster} />
-
               </div>
             `;
             
@@ -45,7 +46,8 @@
         });
     
   }
-  
+
+
 //event listener for click and  getApi function
 document.getElementById("submit").addEventListener("click", getApi);
 var input = document.getElementById("myInput");
