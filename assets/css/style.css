@@ -32,3 +32,8 @@ main {
 .card img {
     width: 100%;
 }
+
+img {
+    max-width:20%;
+    height:auto;
+}
