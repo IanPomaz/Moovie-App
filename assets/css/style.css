@@ -1,3 +1,7 @@
+nav img {
+    max-width: 9%;
+}
+
 body {
     margin: 0; 
     background: lightgray;
@@ -29,11 +33,4 @@ main {
 
 }
 
-.card img {
-    width: 100%;
-}
 
-img {
-    max-width:20%;
-    height:auto;
-}
